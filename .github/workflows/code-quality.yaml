@@ -18,4 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Lint Code Base
-        uses: github/super-linter@v5
+        uses: github/super-linter@slim-v5
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_NATURAL_LANGUAGE: false
